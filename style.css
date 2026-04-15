@@ -149,3 +149,77 @@ html {
     color: #0f172a;
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
 }
+
+
+
+
+/* --- Responsive Design (Mobile Fixes) --- */
+
+@media (max-width: 768px) {
+    /* Navbar fix */
+    nav {
+        flex-direction: column;
+        padding: 15px 5%;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu options ek ke niche ek aayenge */
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0; /* Left margin hata di phone ke liye */
+    }
+
+    /* Hero Section Image & Text fix */
+    header {
+        height: 60vh; /* Phone par height thodi kam kar di */
+        padding: 0 5%;
+        background-position: center; /* Image center mein rahegi */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Font thoda chota kiya taaki screen se bahar na jaye */
+        text-align: center;
+    }
+
+    /* Projects Container fix */
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%; /* Phone screen ki 90% width lega */
+        max-width: 350px;
+    }
+
+    /* Sections Padding fix */
+    section {
+        padding: 40px 5%;
+    }
+
+    /* Skills Container gap fix */
+    .skills-container {
+        gap: 8px;
+    }
+
+    .skill-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    /* Social Buttons fix */
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .social-btn {
+        width: 80%;
+        text-align: center;
+    }
+}
