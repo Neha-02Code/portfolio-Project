@@ -153,73 +153,36 @@ html {
 
 
 
-/* --- Responsive Design (Mobile Fixes) --- */
-
 @media (max-width: 768px) {
-    /* Navbar fix */
-    nav {
-        flex-direction: column;
-        padding: 15px 5%;
-        text-align: center;
+    .menu-icon {
+        display: block; /* Phone par icon dikhega */
+        font-size: 2rem;
+        color: #38bdf8;
+        cursor: pointer;
     }
 
     nav ul {
-        flex-direction: column; /* Menu options ek ke niche ek aayenge */
-        margin-top: 15px;
-        gap: 10px;
+        display: none; /* Pehle se menu chhupa rahega */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #1e293b;
+        padding: 20px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    /* Jab icon click hoga, tab ye class add hogi JS se */
+    nav ul.active {
+        display: flex; 
     }
 
     nav ul li {
-        margin-left: 0; /* Left margin hata di phone ke liye */
-    }
-
-    /* Hero Section Image & Text fix */
-    header {
-        height: 60vh; /* Phone par height thodi kam kar di */
-        padding: 0 5%;
-        background-position: center; /* Image center mein rahegi */
-    }
-
-    header h1 {
-        font-size: 1.8rem; /* Font thoda chota kiya taaki screen se bahar na jaye */
-        text-align: center;
-    }
-
-    /* Projects Container fix */
-    .project-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 90%; /* Phone screen ki 90% width lega */
-        max-width: 350px;
-    }
-
-    /* Sections Padding fix */
-    section {
-        padding: 40px 5%;
-    }
-
-    /* Skills Container gap fix */
-    .skills-container {
-        gap: 8px;
-    }
-
-    .skill-badge {
-        font-size: 0.8rem;
-        padding: 6px 12px;
-    }
-
-    /* Social Buttons fix */
-    .social-links {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .social-btn {
-        width: 80%;
-        text-align: center;
+        margin: 15px 0;
     }
 }
+
+/* Desktop par icon chhupane ke liye */
+.menu-icon { display: none; }
